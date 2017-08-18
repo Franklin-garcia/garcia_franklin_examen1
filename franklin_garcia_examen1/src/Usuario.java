@@ -16,7 +16,7 @@ public class Usuario {
    private String usuario;
    private String contrasena;
    private Date fecha_nacimiento;
-   private int número;
+   private String número;
    private String correo;
    private String Nombre;
    private String genero_favorito;
@@ -26,7 +26,7 @@ public class Usuario {
     public Usuario() {
     }
 
-    public Usuario(String usuario, String contrasena, Date fecha_nacimiento, int número, String correo, String Nombre, String genero_favorito) {
+    public Usuario(String usuario, String contrasena, Date fecha_nacimiento, String número, String correo, String Nombre, String genero_favorito) {
         this.usuario = usuario;
         this.contrasena = contrasena;
         this.fecha_nacimiento = fecha_nacimiento;
@@ -60,11 +60,11 @@ public class Usuario {
         this.fecha_nacimiento = fecha_nacimiento;
     }
 
-    public int getNúmero() {
+    public String getNúmero() {
         return número;
     }
 
-    public void setNúmero(int número) {
+    public void setNúmero(String número) {
         this.número = número;
     }
 
