@@ -115,6 +115,16 @@ public class Principal extends javax.swing.JFrame {
         jButton7 = new javax.swing.JButton();
         jLabel42 = new javax.swing.JLabel();
         cb_usuario = new javax.swing.JComboBox<>();
+        jPanel7 = new javax.swing.JPanel();
+        jLabel43 = new javax.swing.JLabel();
+        jLabel44 = new javax.swing.JLabel();
+        cb_username = new javax.swing.JComboBox<>();
+        jButton8 = new javax.swing.JButton();
+        jPanel8 = new javax.swing.JPanel();
+        jLabel45 = new javax.swing.JLabel();
+        jLabel46 = new javax.swing.JLabel();
+        cb_book = new javax.swing.JComboBox<>();
+        jButton9 = new javax.swing.JButton();
         jd_usuario = new javax.swing.JDialog();
         jd_login_administrador = new javax.swing.JDialog();
         jPanel4 = new javax.swing.JPanel();
@@ -616,6 +626,102 @@ public class Principal extends javax.swing.JFrame {
 
         tab_principal.addTab("Modificar usuario", jPanel6);
 
+        jLabel43.setText("Seleccione usuario");
+
+        jLabel44.setText("Nombre de usuario");
+
+        jButton8.setBackground(new java.awt.Color(255, 0, 0));
+        jButton8.setForeground(new java.awt.Color(255, 255, 255));
+        jButton8.setText("Eliminar");
+        jButton8.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton8MouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
+        jPanel7.setLayout(jPanel7Layout);
+        jPanel7Layout.setHorizontalGroup(
+            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel7Layout.createSequentialGroup()
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel7Layout.createSequentialGroup()
+                        .addGap(283, 283, 283)
+                        .addComponent(jLabel43))
+                    .addGroup(jPanel7Layout.createSequentialGroup()
+                        .addGap(86, 86, 86)
+                        .addComponent(jLabel44)
+                        .addGap(36, 36, 36)
+                        .addComponent(cb_username, javax.swing.GroupLayout.PREFERRED_SIZE, 273, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel7Layout.createSequentialGroup()
+                        .addGap(286, 286, 286)
+                        .addComponent(jButton8)))
+                .addContainerGap(176, Short.MAX_VALUE))
+        );
+        jPanel7Layout.setVerticalGroup(
+            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel7Layout.createSequentialGroup()
+                .addGap(87, 87, 87)
+                .addComponent(jLabel43)
+                .addGap(45, 45, 45)
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel44)
+                    .addComponent(cb_username, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(69, 69, 69)
+                .addComponent(jButton8)
+                .addContainerGap(258, Short.MAX_VALUE))
+        );
+
+        tab_principal.addTab("Eliminar usuario", jPanel7);
+
+        jLabel45.setText("Seleccione titulo del libro");
+
+        jLabel46.setText("titulo de libro");
+
+        jButton9.setBackground(new java.awt.Color(204, 0, 0));
+        jButton9.setForeground(new java.awt.Color(255, 255, 255));
+        jButton9.setText("Eliminar");
+        jButton9.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton9MouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
+        jPanel8.setLayout(jPanel8Layout);
+        jPanel8Layout.setHorizontalGroup(
+            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel8Layout.createSequentialGroup()
+                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel8Layout.createSequentialGroup()
+                        .addGap(230, 230, 230)
+                        .addComponent(jLabel45))
+                    .addGroup(jPanel8Layout.createSequentialGroup()
+                        .addGap(57, 57, 57)
+                        .addComponent(jLabel46)
+                        .addGap(60, 60, 60)
+                        .addComponent(cb_book, javax.swing.GroupLayout.PREFERRED_SIZE, 257, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel8Layout.createSequentialGroup()
+                        .addGap(252, 252, 252)
+                        .addComponent(jButton9)))
+                .addContainerGap(225, Short.MAX_VALUE))
+        );
+        jPanel8Layout.setVerticalGroup(
+            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel8Layout.createSequentialGroup()
+                .addGap(99, 99, 99)
+                .addComponent(jLabel45)
+                .addGap(40, 40, 40)
+                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel46)
+                    .addComponent(cb_book, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(81, 81, 81)
+                .addComponent(jButton9)
+                .addContainerGap(239, Short.MAX_VALUE))
+        );
+
+        tab_principal.addTab("Eliminar libro", jPanel8);
+
         javax.swing.GroupLayout jd_administradorLayout = new javax.swing.GroupLayout(jd_administrador.getContentPane());
         jd_administrador.getContentPane().setLayout(jd_administradorLayout);
         jd_administradorLayout.setHorizontalGroup(
@@ -900,6 +1006,20 @@ public class Principal extends javax.swing.JFrame {
             }
             cb_usuario.setModel(modelo1);
         }
+        if (tab_principal.getSelectedIndex() == 4) {
+            DefaultComboBoxModel modelo2 = new DefaultComboBoxModel();
+            for (Usuario u : lista_usuario) {
+                modelo2.addElement(u);
+            }
+            cb_username.setModel(modelo2);
+        }
+        if (tab_principal.getSelectedIndex()==5) {
+            DefaultComboBoxModel modelo3=new DefaultComboBoxModel();
+            for (Libro y : lista_libro) {
+                modelo3.addElement(y);
+            }
+            cb_book.setModel(modelo3); 
+        }
     }//GEN-LAST:event_tab_principalStateChanged
 
     private void jButton7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton7MouseClicked
@@ -916,7 +1036,7 @@ public class Principal extends javax.swing.JFrame {
         lista_usuario.get(cb_usuario.getSelectedIndex()).setGenero_favorito(genero_favorito);
         lista_usuario.get(cb_usuario.getSelectedIndex()).setNombre(Nombre);
         lista_usuario.get(cb_usuario.getSelectedIndex()).setNúmero(numero);
-        lista_usuario.get(cb_usuario.getSelectedIndex()).setUsuario(usuario); 
+        lista_usuario.get(cb_usuario.getSelectedIndex()).setUsuario(usuario);
         JOptionPane.showMessageDialog(this, "Hecho");
         nombre_usuario1.setText("");
         contrasena_usuario1.setText("");
@@ -924,6 +1044,26 @@ public class Principal extends javax.swing.JFrame {
         correo_usuario1.setText("");
         name_usuario1.setText("");
     }//GEN-LAST:event_jButton7MouseClicked
+
+    private void jButton8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton8MouseClicked
+        lista_usuario.remove(cb_username.getSelectedIndex());
+        JOptionPane.showMessageDialog(this, "Elimiando");
+        DefaultComboBoxModel modelo1 = new DefaultComboBoxModel();
+        for (Usuario u : lista_usuario) {
+            modelo1.addElement(u);
+        }
+        cb_username.setModel(modelo1);
+    }//GEN-LAST:event_jButton8MouseClicked
+
+    private void jButton9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton9MouseClicked
+        lista_libro.remove(cb_book.getSelectedIndex());
+        JOptionPane.showMessageDialog(this, "Eliminado");
+        DefaultComboBoxModel modelo = new DefaultComboBoxModel();
+        for (Libro t : lista_libro) {
+            modelo.addElement(t);
+        }
+        cb_book.setModel(modelo); 
+    }//GEN-LAST:event_jButton9MouseClicked
 
     /**
      * @param args the command line arguments
@@ -963,7 +1103,9 @@ public class Principal extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField autor_libro;
     private javax.swing.JTextField autor_libro1;
+    private javax.swing.JComboBox<String> cb_book;
     private javax.swing.JComboBox<String> cb_libro;
+    private javax.swing.JComboBox<String> cb_username;
     private javax.swing.JComboBox<String> cb_usuario;
     private javax.swing.JPasswordField con_admin;
     private javax.swing.JTextField contrasena_usuario;
@@ -987,6 +1129,8 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
+    private javax.swing.JButton jButton8;
+    private javax.swing.JButton jButton9;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -1024,6 +1168,10 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel40;
     private javax.swing.JLabel jLabel41;
     private javax.swing.JLabel jLabel42;
+    private javax.swing.JLabel jLabel43;
+    private javax.swing.JLabel jLabel44;
+    private javax.swing.JLabel jLabel45;
+    private javax.swing.JLabel jLabel46;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
@@ -1035,6 +1183,8 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
+    private javax.swing.JPanel jPanel7;
+    private javax.swing.JPanel jPanel8;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JDialog jd_administrador;
