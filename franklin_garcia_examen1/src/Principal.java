@@ -903,7 +903,26 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_tab_principalStateChanged
 
     private void jButton7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton7MouseClicked
-        // TODO add your handling code here:
+        String usuario = nombre_usuario1.getText();
+        String contrasena = contrasena_usuario1.getText();
+        Date fecha_nacimiento = nacimiento_usuario1.getDate();
+        String numero = telefono_usuario1.getText();
+        String correo = correo_usuario1.getText();
+        String Nombre = name_usuario1.getText();
+        String genero_favorito = genero_usuario1.getSelectedItem().toString();
+        lista_usuario.get(cb_usuario.getSelectedIndex()).setContrasena(contrasena);
+        lista_usuario.get(cb_usuario.getSelectedIndex()).setCorreo(correo);
+        lista_usuario.get(cb_usuario.getSelectedIndex()).setFecha_nacimiento(fecha_nacimiento);
+        lista_usuario.get(cb_usuario.getSelectedIndex()).setGenero_favorito(genero_favorito);
+        lista_usuario.get(cb_usuario.getSelectedIndex()).setNombre(Nombre);
+        lista_usuario.get(cb_usuario.getSelectedIndex()).setNúmero(numero);
+        lista_usuario.get(cb_usuario.getSelectedIndex()).setUsuario(usuario); 
+        JOptionPane.showMessageDialog(this, "Hecho");
+        nombre_usuario1.setText("");
+        contrasena_usuario1.setText("");
+        telefono_usuario1.setText("");
+        correo_usuario1.setText("");
+        name_usuario1.setText("");
     }//GEN-LAST:event_jButton7MouseClicked
 
     /**
