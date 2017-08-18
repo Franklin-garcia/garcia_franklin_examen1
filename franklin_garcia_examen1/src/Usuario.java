@@ -22,7 +22,7 @@ public class Usuario {
    private String genero_favorito;
    private ArrayList<Integer>lista_libros=new ArrayList();
    private ArrayList<Integer>lista_amigos=new ArrayList();
-
+    private ArrayList<Solicitud> lista_solicitudes=new ArrayList();
     public Usuario() {
     }
 
@@ -106,6 +106,14 @@ public class Usuario {
 
     public void setLista_amigos(ArrayList<Integer> lista_amigos) {
         this.lista_amigos = lista_amigos;
+    }
+
+    public void setLista_solicitudes(ArrayList<Solicitud> lista_solicitudes) {
+        this.lista_solicitudes = lista_solicitudes;
+    }
+
+    public ArrayList<Solicitud> getLista_solicitudes() {
+        return lista_solicitudes;
     }
 
     @Override

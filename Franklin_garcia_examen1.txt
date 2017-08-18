@@ -1,0 +1,5 @@
+Usuario administrador
+-Usuario :  hola
+-Contrasena: 1234
+
+https://github.com/Franklin-garcia/garcia_franklin_examen1.git
