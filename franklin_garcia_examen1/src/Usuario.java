@@ -22,4 +22,95 @@ public class Usuario {
    private String genero_favorito;
    private ArrayList<Integer>lista_libros=new ArrayList();
    private ArrayList<Libro>lista_amigos=new ArrayList();
+
+    public Usuario() {
+    }
+
+    public Usuario(String usuario, String contrasena, Date fecha_nacimiento, int número, String correo, String Nombre, String genero_favorito) {
+        this.usuario = usuario;
+        this.contrasena = contrasena;
+        this.fecha_nacimiento = fecha_nacimiento;
+        this.número = número;
+        this.correo = correo;
+        this.Nombre = Nombre;
+        this.genero_favorito = genero_favorito;
+    }
+
+    public String getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(String usuario) {
+        this.usuario = usuario;
+    }
+
+    public String getContrasena() {
+        return contrasena;
+    }
+
+    public void setContrasena(String contrasena) {
+        this.contrasena = contrasena;
+    }
+
+    public Date getFecha_nacimiento() {
+        return fecha_nacimiento;
+    }
+
+    public void setFecha_nacimiento(Date fecha_nacimiento) {
+        this.fecha_nacimiento = fecha_nacimiento;
+    }
+
+    public int getNúmero() {
+        return número;
+    }
+
+    public void setNúmero(int número) {
+        this.número = número;
+    }
+
+    public String getCorreo() {
+        return correo;
+    }
+
+    public void setCorreo(String correo) {
+        this.correo = correo;
+    }
+
+    public String getNombre() {
+        return Nombre;
+    }
+
+    public void setNombre(String Nombre) {
+        this.Nombre = Nombre;
+    }
+
+    public String getGenero_favorito() {
+        return genero_favorito;
+    }
+
+    public void setGenero_favorito(String genero_favorito) {
+        this.genero_favorito = genero_favorito;
+    }
+
+    public ArrayList<Integer> getLista_libros() {
+        return lista_libros;
+    }
+
+    public void setLista_libros(ArrayList<Integer> lista_libros) {
+        this.lista_libros = lista_libros;
+    }
+
+    public ArrayList<Libro> getLista_amigos() {
+        return lista_amigos;
+    }
+
+    public void setLista_amigos(ArrayList<Libro> lista_amigos) {
+        this.lista_amigos = lista_amigos;
+    }
+
+    @Override
+    public String toString() {
+        return usuario;
+          }
+   
 }
