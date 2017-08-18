@@ -159,8 +159,9 @@ public class Principal extends javax.swing.JFrame {
         cb_personas = new javax.swing.JComboBox<>();
         jButton13 = new javax.swing.JButton();
         jLabel64 = new javax.swing.JLabel();
-        jLabel65 = new javax.swing.JLabel();
-        cb_amigos = new javax.swing.JComboBox<>();
+        jButton17 = new javax.swing.JButton();
+        jScrollPane5 = new javax.swing.JScrollPane();
+        ta_amigos = new javax.swing.JTextArea();
         jPanel12 = new javax.swing.JPanel();
         jLabel66 = new javax.swing.JLabel();
         jLabel67 = new javax.swing.JLabel();
@@ -981,7 +982,16 @@ public class Principal extends javax.swing.JFrame {
 
         jLabel64.setText("Amigos que tengo");
 
-        jLabel65.setText("Lista de amigos ");
+        jButton17.setText("Refrescar");
+        jButton17.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton17MouseClicked(evt);
+            }
+        });
+
+        ta_amigos.setColumns(20);
+        ta_amigos.setRows(5);
+        jScrollPane5.setViewportView(ta_amigos);
 
         javax.swing.GroupLayout jPanel11Layout = new javax.swing.GroupLayout(jPanel11);
         jPanel11.setLayout(jPanel11Layout);
@@ -997,16 +1007,16 @@ public class Principal extends javax.swing.JFrame {
                         .addComponent(jLabel64))
                     .addGroup(jPanel11Layout.createSequentialGroup()
                         .addGap(37, 37, 37)
-                        .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel63)
-                            .addComponent(jLabel65))
+                        .addComponent(jLabel63)
                         .addGap(18, 18, 18)
-                        .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel11Layout.createSequentialGroup()
-                                .addComponent(cb_personas, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(37, 37, 37)
-                                .addComponent(jButton13, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(cb_amigos, javax.swing.GroupLayout.PREFERRED_SIZE, 218, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addComponent(cb_personas, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(37, 37, 37)
+                        .addComponent(jButton13, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel11Layout.createSequentialGroup()
+                        .addGap(101, 101, 101)
+                        .addComponent(jButton17)
+                        .addGap(26, 26, 26)
+                        .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 366, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(146, Short.MAX_VALUE))
         );
         jPanel11Layout.setVerticalGroup(
@@ -1021,11 +1031,11 @@ public class Principal extends javax.swing.JFrame {
                     .addComponent(jButton13))
                 .addGap(72, 72, 72)
                 .addComponent(jLabel64)
-                .addGap(18, 18, 18)
-                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel65)
-                    .addComponent(cb_amigos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(236, Short.MAX_VALUE))
+                .addGap(30, 30, 30)
+                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jButton17)
+                    .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 219, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(25, Short.MAX_VALUE))
         );
 
         principal.addTab("Agregar amigos", jPanel11);
@@ -1214,7 +1224,7 @@ public class Principal extends javax.swing.JFrame {
 
         jLabel49.setText("Contrasena");
 
-        jLabel50.setText("Nombre de la persona");
+        jLabel50.setText("Nombre completo de la persona");
 
         jButton10.setText("Ingresar");
         jButton10.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -1239,13 +1249,14 @@ public class Principal extends javax.swing.JFrame {
                             .addComponent(jLabel48)
                             .addComponent(jLabel49))
                         .addGap(18, 18, 18)
-                        .addGroup(jd_login_usuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButton10)
-                            .addGroup(jd_login_usuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(iterador, 0, 225, Short.MAX_VALUE)
-                                .addComponent(tf_username)
-                                .addComponent(tf_password)))))
-                .addContainerGap(52, Short.MAX_VALUE))
+                        .addGroup(jd_login_usuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(iterador, 0, 225, Short.MAX_VALUE)
+                            .addComponent(tf_username)
+                            .addComponent(tf_password)))
+                    .addGroup(jd_login_usuarioLayout.createSequentialGroup()
+                        .addGap(180, 180, 180)
+                        .addComponent(jButton10)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jd_login_usuarioLayout.setVerticalGroup(
             jd_login_usuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1264,9 +1275,9 @@ public class Principal extends javax.swing.JFrame {
                 .addGroup(jd_login_usuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel49)
                     .addComponent(tf_password, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(61, 61, 61)
+                .addGap(66, 66, 66)
                 .addComponent(jButton10)
-                .addContainerGap(150, Short.MAX_VALUE))
+                .addContainerGap(145, Short.MAX_VALUE))
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -1584,6 +1595,7 @@ public class Principal extends javax.swing.JFrame {
             cb_libros.setModel(modelo);
         }
         if (principal.getSelectedIndex() == 2) {
+            ta_amigos.setText(""); 
             DefaultComboBoxModel modelo1 = new DefaultComboBoxModel();
             for (Usuario u : lista_usuario) {
                 modelo1.addElement(u);
@@ -1665,6 +1677,17 @@ public class Principal extends javax.swing.JFrame {
         ta_solicitudes.setText(sol);
     }//GEN-LAST:event_jButton14MouseClicked
 
+    private void jButton17MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton17MouseClicked
+        String en = "";
+        int con = 0;
+        for (Object s : lista_usuario.get(indice).getLista_amigos()) {
+            int n = lista_usuario.get(indice).getLista_amigos().get(con);
+            en += lista_usuario.get(indice).getLista_amigos().indexOf(s) + "--" + lista_usuario.get(n).getNombre() + "\n";
+            con++;
+        }
+      ta_amigos.setText(en); 
+    }//GEN-LAST:event_jButton17MouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -1704,7 +1727,6 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JTextField atender;
     private javax.swing.JTextField autor_libro;
     private javax.swing.JTextField autor_libro1;
-    private javax.swing.JComboBox<String> cb_amigos;
     private javax.swing.JComboBox<String> cb_book;
     private javax.swing.JComboBox<String> cb_libro;
     private javax.swing.JComboBox<String> cb_libros;
@@ -1738,6 +1760,7 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JButton jButton14;
     private javax.swing.JButton jButton15;
     private javax.swing.JButton jButton16;
+    private javax.swing.JButton jButton17;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
@@ -1807,7 +1830,6 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel62;
     private javax.swing.JLabel jLabel63;
     private javax.swing.JLabel jLabel64;
-    private javax.swing.JLabel jLabel65;
     private javax.swing.JLabel jLabel66;
     private javax.swing.JLabel jLabel67;
     private javax.swing.JLabel jLabel68;
@@ -1831,6 +1853,7 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
+    private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JDialog jd_administrador;
     private javax.swing.JDialog jd_login_administrador;
     private javax.swing.JDialog jd_login_usuario;
@@ -1850,6 +1873,7 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> puntaje_libro;
     private javax.swing.JComboBox<String> puntaje_libro1;
     private javax.swing.JTextField solicitud;
+    private javax.swing.JTextArea ta_amigos;
     private javax.swing.JTextArea ta_solicitudes;
     private javax.swing.JTabbedPane tab_principal;
     private javax.swing.JTable tabla1;
